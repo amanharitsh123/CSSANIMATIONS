@@ -1,0 +1,18 @@
+@keyframes slide {
+	0% {
+		transform : translate3d(0px,0px,0px);
+		animation-timing-function: ease-in;
+	}
+	50% {
+		transform : translate3d(800px,0px,600px);
+
+	}
+	100%
+	{
+		transform : translate3d(0px,0px,0px);
+	}
+}
+
+#s1{
+	animation: slide 5s infinite;
+}   
