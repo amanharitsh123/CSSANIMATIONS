@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sliding Js animation</title>
+	<style type="text/css">
+	body {
+		background-color: #ff0088;
+		margin : 30px;
+		margin-top: 10px;
+	}
+	#object {
+		position: relative;
+		left : 50px;
+
+	}
+
+
+
+	</style>
+</head>
+<body>
+<img id = "object" src="icons/f1.png" height="200" width = "200">
+<script>
+	var object = document.querySelector("#object")
+	var currentpos = 0;
+	var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+	function move(){
+		currentpos +=5;
+		object.style.left = currentpos + "px";
+        if(Math.abs(currentpos) >= 800)
+        	{currentpos = -200}
+
+		requestAnimationFrame(move);
+	}
+	move();
+	</script>
+</body>
+</html>
